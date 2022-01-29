@@ -24,3 +24,6 @@ test:
 
 testacc: 
 	TF_ACC=1 go test $(TEST) -v $(TESTARGS) -timeout 120m   
+
+clean:
+	rm -rf ~/.terraform.d/plugins/${HOSTNAME}/${NAMESPACE}/${NAME}/${VERSION}/${OS_ARCH}
